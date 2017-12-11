@@ -1,0 +1,56 @@
+body {
+    background: gold;
+}
+
+h1,h2 {
+    color: red;
+    text-align: center;
+}
+
+.container {
+    width: 1024px;
+    text-align: center;
+    margin: auto;
+
+}
+
+.content { 
+    width: 100%;
+    position: relative;
+    overflow: auto;
+}
+
+.list1 {
+    width: 47%;
+    float: left;
+    text-align: left;
+    padding: 10px;
+}
+
+.list2 {
+    width: 47%;
+    float: right;
+    text-align: left;
+    padding: 10px;
+}
+
+.burger {
+    width: 100%;
+    background: white;
+    height: 50px;
+}
+
+p {
+    padding: 10px 20px;
+}
+
+button {
+    float: right;
+}
+
+.create-form button {
+    float: none;
+    font-size: 14px;
+    margin: 15px;
+    padding: 5px;
+}

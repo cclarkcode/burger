@@ -15,11 +15,17 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Assign static directory to be served
-app.use(express.static("app/public"));
+app.use(express.static("public"));
+
+// Set Handlebars as view engine.
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Routes
-require("./app/routes/api-routes.js")(app);
-require("./app/routes/html-routes.js")(app);
+var routes = require('./controllers/controller.js');
+app.use('/', routes);
 
 // Start the server
 app.listen(PORT, function() {
